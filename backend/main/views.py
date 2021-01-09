@@ -31,6 +31,8 @@ class CoronaViewSet(ModelViewSet):
 	titles = soup.findAll("div", {"class": "accordion-title"})
 	#
 	get_patients_num = soup.select('.text-17')
+	day= soup.select('.cal-day')
+	print(day)
 	arr = []
 	# split으로 나눌때 arr에 2중 list로 들어가게된다
 	for i in range(10):
